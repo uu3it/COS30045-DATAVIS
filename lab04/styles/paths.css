@@ -1,0 +1,20 @@
+
+.line{
+	fill: none;
+	stroke: slategrey;
+	stroke-width: 0.5;
+}
+
+.line_halfMilMark{
+	stroke: red;
+	stroke-width: 0.5;
+}
+
+.halfMilMark{
+	fill: red;
+	stroke-width:0.5;
+}
+
+.area {
+	fill: slategrey;
+}

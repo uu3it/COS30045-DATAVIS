@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Drawing shape with SVG">
+	<meta name="keywords" content="HTML, CSS">
+	<meta name="author" content="Thuy Tien Le">
+
+	<link rel="stylesheet" type="text/css" href="styles/d3.css">
+
+	<title>Drawing Shape with SVG</title>
+</head>
+<body>
+	<h1>Drawing Shapes with SVG</h1>
+
+	<!--a 500 x 50 px SVG element with the SVG tag -->
+	<svg width="500" height="250" style="background-color: slategrey;">
+		<!--Drawing a circle - MUST SPECIFY-->
+		<circle cx="25", cy="25", r="25" fill="cornflowerblue"/>
+		<!--cx = x pos; cy = y pos; r = radius-->
+		<!--Drawing a rectangle/square-->
+		<rect x="50" y="0" width="50" height="50" fill= "red";/>
+		<!--Drawing an ellipse-->
+		<ellipse cx="135.5", cy="25", rx="35", ry="25" fill= "green" />
+		
+		<!--Drawing a house:
+			Drawing a triangle-->
+		<polygon points="100,70 150,140 50,140" fill="rgb(189, 59, 15)"/>
+		<rect x="50" y="140" width="100" height="100" fill="rgb(179, 217, 255)" />
+		<rect x="70" y="180" width="35" height="55" fill="rgb(172, 115, 57)"/>
+		<circle cx="76" cy="210" r="3" fill="rgb(230, 255, 153)" />
+
+
+	</svg>
+
+	<footer style="color: grey">COS30045 Data Visualisation<br>
+	Thuy Tien Le</footer>
+
+</body>
+</html>

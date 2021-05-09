@@ -1,0 +1,13 @@
+/*
+File name: demo1css.css
+Author: Thuy Tien Le - 102848464
+Description: demonstration of the use of CSS for lab 01
+*/
+
+svg>rect {
+	stroke: black; stroke-width: 1.5; opacity: 0.5;
+}
+
+svg>polygon {
+	stroke: black; stroke-dasharray: 5,5; opacity: 0.7;
+}

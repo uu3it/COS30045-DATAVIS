@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<meta name="description" content="Data Visualisation"/>
+	<meta name="keywords" content="HTML, CSS, D3"/>
+	<meta name="author" content="Thuy Tien Le"/>
+	<script src="https://d3js.org/d3.v6.min.js"></script>
+	<title>Task 1.4 - 1.5 D3 Data Binding</title>
+</head>
+<body>
+	<h1>The D3 Journey starts here...</h1>
+
+	<script>
+		//example from Murray
+
+		var dataset = [14, 5, 26, 23, 9, 12, 24, 6, 8, 10, 3];
+
+			/*d3.select("body")    //select body of the document
+				.append("p") // append a paragraph element to the element selected prev.
+				.text("New paragraph!");   //Insert the text into current selection tags; Finish command with ;
+			
+
+			d3.select("body").selectAll("p")
+				.data(dataset)   //counts and prepares the data values
+				.enter()    //create a new place holder element for each bit of data
+				.append("p")   //appends a p element to match each placeholder
+				.text(function(d){    //annonymous function - accepts d from the data set as an input and loops through each value
+					var write = "";
+					if (d > 10) {
+						write = "Warning: "  // add warning of d is a number > 10
+					}
+					return write + "Joe watched " + d + " cat videos today." 
+					// add Jow watched with the value of d
+				}).style("color", function(d){    //change color to red of d value > 10
+					if (d > 10) {
+						return "red";
+					}
+				})
+				;
+				*/
+
+		// setting up width and height of svg
+		var w = 500;   
+		var h = 100;
+		var barPadding = 1;
+
+		var svg = d3.select("body")
+					.append("svg")
+					.attr("width", w)
+					.attr("height", h);
+
+		svg.selectAll("rect")
+			.data(dataset)
+			.enter()
+			.append("rect")
+			.attr("x", function(d, i){
+				return i * (w / dataset.length);
+			})
+			
+			.attr("y", function(d){
+				return h - d;
+			})
+			.attr("width", (w/dataset.length - barPadding))
+			.attr("height", function(d){
+				return d * 4;
+			})
+			.attr("fill", "blue");
+
+
+ 	</script>
+
+ 	<br>
+ 	<bf>
+ 	<footer style="color: grey">COS30045 Data Visualisation<br>
+	Thuy Tien Le</footer>
+
+</body>
+</html>
